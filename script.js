@@ -34,15 +34,15 @@ localStorage.setItem("village", gaon.innerText);
 
 
 window.onload = ()=>{
-    if(localStorage.getItem("firstName") != ""){
+    if(localStorage.getItem("firstName") === null || localStorage.getItem("firstName") === ""){
+        details();       
+    }else{
         fName.innerText= localStorage.getItem("firstName");
         lName.innerText= localStorage.getItem("lastName");
         destination.innerText= localStorage.getItem("country");
         phNum.innerText= localStorage.getItem("phoneNumber");
         st.innerText= localStorage.getItem("state");
         town.innerText= localStorage.getItem("city");
-        gaon.innerText= localStorage.getItem("village");        
-    }else{
-        details();
+        gaon.innerText= localStorage.getItem("village"); 
     }
 }
